@@ -10,6 +10,7 @@ raw base URL instead of stitching together one repository per region.
 ```
 assets/
   region/
+    regions-world-v3.jpg
     kanto-map.jpg
     johto-map.png
     hoenn-map.jpg
@@ -25,6 +26,7 @@ assets/
 
 | Region | Path | Dimensions | Size | Source |
 |---|---|---|---|---|
+| World map | `assets/region/regions-world-v3.jpg` | 2400 × 1792 | 2.46 MB | Supplied world-map artwork |
 | Kanto | `assets/region/kanto-map.jpg` | 2400 × 1792 | 2.1 MB | `TheSunphis/Pika` |
 | Johto | `assets/region/johto-map.png` | 2528 × 1696 | 6.7 MB | `TheSunphis/johto-assets` |
 | Hoenn | `assets/region/hoenn-map.jpg` | 531 × 376 | 75 KB | `TheSunphis/hoenn-assets` |
@@ -36,6 +38,8 @@ assets/
 | Paldea | `assets/region/paldea-map.png` | 1200 × 896 | 2.0 MB | `TheSunphis/paldea-assets` |
 
 ### Sourcing notes
+
+- **World map** is the supplied full-world overview, stored at the filename used by `/region`.
 
 - **Kanto** comes from `TheSunphis/Pika`, not `kanto-assets`. The `kanto-assets` repository was
   reset on 2026-11-14 and its `main` branch is currently empty; it never held a whole-region Kanto
@@ -52,7 +56,13 @@ assets/
 https://raw.githubusercontent.com/TheSunphis/pika-assets/main/assets
 ```
 
-So the Kanto map, for example, is:
+The world overview shown before selecting a region is:
+
+```
+https://raw.githubusercontent.com/TheSunphis/pika-assets/main/assets/region/regions-world-v3.jpg
+```
+
+The Kanto map, for example, is:
 
 ```
 https://raw.githubusercontent.com/TheSunphis/pika-assets/main/assets/region/kanto-map.jpg
@@ -60,5 +70,5 @@ https://raw.githubusercontent.com/TheSunphis/pika-assets/main/assets/region/kant
 
 ## Not included
 
-Only the whole-region overview maps live here. Per-town and per-route art (`assets/region-maps/`,
+The world overview and whole-region overview maps live here. Per-town and per-route art (`assets/region-maps/`,
 `assets/<location>/region/`) still belongs to the regional repositories.
